@@ -1,0 +1,53 @@
+
+#panelContent {
+  display: flex;
+  padding: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.books {
+  display: flex;
+  width: 100%;
+}
+
+.author .text{
+    color: #000;
+}
+
+#buy {
+  -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1; /* Firefox 19- */
+  -ms-flex: 1; /* TWEENER - IE 10 */
+  -webkit-flex: 1; /* NEW - Chrome */
+  flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+  #buy img {
+    max-height: 360px;
+  }
+
+.buylink {
+  color: #666;
+  text-decoration: none;
+}
+
+  .buylink:hover {
+    text-decoration: underline;
+  }

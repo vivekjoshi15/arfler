@@ -1,0 +1,37 @@
+<body>
+  <div id="containerMain">
+    <header></header>
+    <div class="containerContent">
+      <div class="catTop">
+        <div class="arrowLeft text-left">
+          <span id="aLeft" class="fa fa-chevron-left">&lt;</span>
+        </div>
+        <div class="ticker-wrap">
+          <div class="ticker">
+            <div class="tickerItem"><a [routerLink]="['#']">ABOUT HAKKA.HOUSE INTL.</a></div>
+            <div class="tickerItem"><a [routerLink]="['#']">HAKKA.HOUSE BUSINESS PLAN</a></div>
+            <div class="tickerItem"><a [routerLink]="['#']">PUBLICATIONS</a></div>
+            <div class="tickerItem"><a [routerLink]="['#']">HAKKA.HOUSE HUI CROWD OFFERING</a></div>
+            <div class="tickerItem"><a [routerLink]="['#']">PARTICIPATE/DONATE</a></div>
+          </div>
+        </div>
+        <div class="arrowRight text-right">
+          <span id="aRight" class="fa fa-chevron-right">&gt;</span>
+        </div>
+      </div>
+    </div>
+    <div class="topBanner">
+      <a [routerLink]="['/']"><img src="bannerTop.jpg" alt="" border="0" /></a>
+      <div class="background"></div>
+      <span></span>
+    </div>
+    <div id="panelContent">
+      <router-outlet></router-outlet>
+    </div>
+    <footer>
+      <div class="containerContent">
+        <div class="copyright">© 2020 Arfler.com</div>
+      </div>
+    </footer>
+  </div>
+</body>
