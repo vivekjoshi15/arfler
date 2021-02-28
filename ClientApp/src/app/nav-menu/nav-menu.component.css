@@ -67,7 +67,7 @@ header {
 }
 
   #logo img {
-    height: 40px;
+    height: 35px;
   }
 
 #logoImg {
@@ -83,14 +83,13 @@ header {
   flex: 0; /* NEW, Spec - Opera 12.1, Firefox 20+ */
   margin-right: 10px;
   text-align: center;
-  min-height: 90px;
+  min-height: 70px;
 }
 
   #logoImg img {
-    height: 50px;
-    width: 50px;
-    margin-top: 9px;
-    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    margin-top: 6px;
   }
 
   #logoImg a {
@@ -153,6 +152,8 @@ header {
 
 .navbar {
   border: 1px solid transparent;
+  width: 100%;
+  margin-top: 8px;
 }
 
   .navbar:before,
@@ -234,9 +235,9 @@ header {
 .navbar-toggle {
   position: absolute;
   z-index: 1000;
-  right: 7px;
-  padding: 5px 8px;
-  top: 20px;
+  right: 0px;
+  padding: 2px 5px;
+  top: 0px;
   margin-right: 15px;
   margin-bottom: 8px;
   background-color: transparent;
@@ -254,6 +255,19 @@ header {
   width: 30px;
   height: 3px;
   margin: 3px 0px;
+}
+
+@media (max-width: 668px) {
+  #headerLeft {
+    width: 250px;
+    padding-top: 10px;
+    min-width: 250px;
+  }
+
+  #headerRight {
+    min-width: 140px;
+    max-width: 140px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -287,4 +301,17 @@ header {
         padding-top: 15px;
         padding-bottom: 15px;
       }
+}
+
+@media (min-width: 892px) {
+  #headerLeft {
+    width: 20%;
+    padding-top: 10px;
+    min-width: 270px;
+  }
+
+  #headerRight {
+    min-width: 470px;
+    max-width: 470px;
+  }
 }

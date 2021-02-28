@@ -1,15 +1,85 @@
 <div class="containerContent">
   <div id="content">
-    <div class="author">
-      <img src="harry.png" alt="" width="126" />
-      <div class="text">Founder &amp; Author</div>
+    <div id="topRow">
+      <div class="author">
+        <div id="pnlLeft">
+          <img src="./images/harry.png" alt="" width="126" />
+          <a href="mailto:harry@arfler.com" class="lnk">Email Harry</a>
+        </div>
+        <div class="text">
+          Welcome to MY BOOKSTORE on ARFLER.com!<br /><br />
+          I am Harry Mokm. I live in Seattle, Washington, and grew up in Vietnam. As a child,
+          I witnessed the violence and destruction caused by war, which produced a strong desire
+          within me to help to achieve a better world. As a matter of fact, I have dreamt of doing
+          so since I first set foot on North American soil over four decades ago. A better world seems
+          far away to us today...<br />
+          <a class="lnk2" (click)="openAboutMe('Welcome to MY BOOKSTORE on ARFLER.com')">..... Click to open page</a>
+        </div>
+      </div>
+      <div class="websites">
+        <div class="row1">
+          <div class="website">
+            <a href="https://www.interbrunch.com/" target="_blank"><img src="./images/logo_interbrunch.png" alt="" /></a>
+            <a href="https://www.interbrunch.com/" target="_blank"><div class="text">InterBrunch</div></a>
+          </div>
+          <div class="website">
+            <a href="https://www.hakka.house/" target="_blank"><img src="./images/logo_hakkahouse.png" alt="" /></a>
+            <a href="https://www.hakka.house/" target="_blank"><div class="text">Hakka.House</div></a>
+          </div>
+          <div class="website">
+            <a href="https://www.solarider.com/" target="_blank"><img src="./images/logo_solarider.png" alt="" /></a>
+            <a href="https://www.solarider.com/" target="_blank"><div class="text">SolaRider</div></a>
+          </div>
+        </div>
+        <div class="row2">
+          <span (click)="setDonatePrice('5')" [ngClass]="{'sel': this.price === '5'}">$5</span>
+          <span (click)="setDonatePrice('10')" [ngClass]="{'sel': this.price === '10'}">$10</span>
+          <span (click)="setDonatePrice('20')" [ngClass]="{'sel': this.price === '20'}">$20</span>
+          <span (click)="setDonatePrice('100')" [ngClass]="{'sel': this.price === '100'}">$100</span>
+          <a class="btnDonate" (click)="openDonate()">Donate</a>
+        </div>
+      </div>
     </div>
     <div class="books">
-      <div id="buy">
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFPSBVCQB68C8" target="_blank" rel="noopener noreferrer"><img src="./book-cover1.png" border="0" alt="Buy" /></a>
+      <div class="buy">
+        <img src="./images/book1.png" border="0" alt="Buy" (click)="openDialog(1,'1.png','Twelve Virtues')" />
+        <div class="info">
+          <a class="preview" (click)="openDialog(1,'1.png','Twelve Virtues')">Preview</a>
+          <a class="buy" [routerLink]="['/buy/book/1']">BUY</a>
+          <span>$25</span>
+        </div>
       </div>
-      <div id="buy">
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFPSBVCQB68C8" target="_blank" rel="noopener noreferrer"><img src="./book-cover.png" border="0" alt="Buy" /></a>
+      <div class="buy">
+        <img src="./images/book2.png" border="0" alt="Buy" (click)="openDialog(2,'2.png','B.E.T.A.S')" />
+        <div class="info">
+          <a class="preview" (click)="openDialog(2,'2.png','B.E.T.A.S')">Preview</a>
+          <a class="buy" [routerLink]="['/buy/book/2']">BUY</a>
+          <span>$25</span>
+        </div>
+      </div>
+      <div class="buy">
+        <img src="./images/book3.jpg" border="0" alt="Buy" (click)="openDialog(3,'3.jpg','The Paxifier')" />
+        <div class="info">
+          <a class="preview" style="width:100%;justify-content: center">Available soon</a>
+        </div>
+      </div>
+      <div class="buy">
+        <img src="./images/book4.jpg" border="0" alt="Buy" (click)="openDialog(4,'4.jpg','iCapitalism')" />
+        <div class="info">
+          <a class="preview" style="width:100%;justify-content: center">Available soon</a>
+        </div>
+      </div>
+      <div class="buy">
+        <img src="./images/book5.png" border="0" alt="Buy" (click)="openDialog(5,'5.png','The Starfruit Tree Outline')" />
+        <div class="info">
+          <a class="preview" style="width:100%;justify-content: center">Available soon</a>
+        </div>
+      </div>
+      <div class="buy">
+        <img src="./images/book6.png" border="0" alt="Buy" />
+        <div class="info">
+          <a class="preview" style="width:100%;justify-content: center">Available soon</a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,115 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arfler - @ViewData["Title"]</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="~/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    @*<environment names="Development">*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @*<link rel="stylesheet" href="~/css/main.css" />*@
+    <link rel="stylesheet" href="~/css/main.min.css" asp-append-version="true" />
+    @*</environment>*@
+    @*<environment names="Staging,Production">
+
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/main.min.css" asp-append-version="true" />
+        </environment>*@
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    @Html.Raw(JavaScriptSnippet.FullScript)
+    <script type="text/javascript">
+       
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="container headerWrap">
+            <div class="row">
+                <div class="logoLeft">
+                    <div class="logo">
+                        <a href="\"><img src="/images/img_logo1.png" alt="SEATTLE LOGO" class="img-responsive" border="0" /></a>
+                    </div>
+                    <div class="head_ad">
+                        <a href="https://www.microsoft.com/en-us/dynamics365/home" target="_blank"><img src="/images/img_ad1.png" class="img-responsive" style="width: 450px;" /></a>
+                    </div>
+                </div>
+                <div class="pnlRight">
+                    <div class="leftPartNave">
+                        <nav class="navcl navbar navbar-inverse ">
+                            <div class="container-fluid" style="padding: 0px;">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="myNavbar">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="\">EAT&Entertain</a></li>
+                                        <li><a href="#">Places</a></li>
+                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="#">uList</a></li>
+                                        <li><a href="#">98144</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collapse navbar-collapse" id="myLogin">
+                                    <ul class="nav navbar-nav">
+                                        <li>@await Html.PartialAsync("_LoginPartial")</li>
+                                        <li><a href="#">English <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <div class="postAd">
+                           @await Html.PartialAsync("_LoginSettingsPartial")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @RenderSection("TopCategoryNav", required: false)
+    </div>
+    <div class="topBanner">
+        @RenderSection("TopBanner", required: false)
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

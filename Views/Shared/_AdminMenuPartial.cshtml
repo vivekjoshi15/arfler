@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Session;
+@using Microsoft.AspNetCore.Http;
+@using Arfler.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<ul class="adminMenu">
+
+    @if (TempData["userRole"].ToString().ToLower() == "admin")
+    {
+        <li>
+            <a href="/Admin/Categories">Categories</a>
+        </li>
+    }
+
+    <li>
+        <a href="/Admin/Index">Resaturants</a>
+    </li>
+    @*<li>
+        <a href="/Admin/People">People/Team</a>
+    </li>*@
+    @*<li>
+            <a href="/Admin/MenuCategories">Menu Categories</a>
+        </li>
+        <li>
+            <a href="/Admin/MenuItems">Menu Items</a>
+        </li>*@
+</ul>

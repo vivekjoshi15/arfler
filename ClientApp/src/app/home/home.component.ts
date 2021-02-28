@@ -1,5 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
+import { LetterPopupComponent } from '../letter-popup/letter-popup.component';
+import { DonateComponent } from '../donate/donate.component';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +11,46 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  public forecasts: WeatherForecast[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+  price: string;
+
+  constructor(
+    http: HttpClient,
+    @Inject('BASE_URL') baseUrl: string,
+    public dialog: MatDialog) {
+     
   }
-}
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+  setDonatePrice(price: string) {
+    this.price = price;
+  }
+
+  openAboutMe(title: string): void {
+    this.dialog.open(LetterPopupComponent, {
+      width: '55%',
+      data: {
+        title: title
+      }
+    });
+  }
+
+  openDialog(id: number, image: string, title: string): void {
+    this.dialog.open(ModalComponent, {
+      width: '55%',
+      data: {
+        title: title,
+        image: image,
+        id: id
+      }
+    });
+  }
+
+  openDonate(): void {
+    this.dialog.open(DonateComponent, {
+      width: '55%',
+      data: {
+        price: this.price
+      }
+    });
+  }
 }

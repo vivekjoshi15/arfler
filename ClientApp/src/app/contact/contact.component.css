@@ -1,0 +1,27 @@
+
+.mat-dialog-content {
+  font-size: 14px;
+  margin: 0 -5px;
+  padding: 0 35px;
+}
+
+.mat-dialog-title {
+  font-weight: bold;
+  text-align: center;
+  color: #b91b0e;
+}
+
+h2 {
+  text-decoration:underline;
+  font-size:15px;
+  font-weight: bold;
+}
+
+.mat-button {
+  background: #b91b0e;
+  color: #fff;
+}
+
+.mat-form-field {
+  display: flex;
+}

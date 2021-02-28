@@ -3,25 +3,21 @@
     <header></header>
     <div class="containerContent">
       <div class="catTop">
-        <div class="arrowLeft text-left">
-          <span id="aLeft" class="fa fa-chevron-left">&lt;</span>
-        </div>
+        <div class="arrowLeft text-left"><span id="aLeft" class="fa fa-chevron-left">&lt;</span></div>
         <div class="ticker-wrap">
           <div class="ticker">
-            <div class="tickerItem"><a [routerLink]="['#']">ABOUT HAKKA.HOUSE INTL.</a></div>
-            <div class="tickerItem"><a [routerLink]="['#']">HAKKA.HOUSE BUSINESS PLAN</a></div>
-            <div class="tickerItem"><a [routerLink]="['#']">PUBLICATIONS</a></div>
-            <div class="tickerItem"><a [routerLink]="['#']">HAKKA.HOUSE HUI CROWD OFFERING</a></div>
-            <div class="tickerItem"><a [routerLink]="['#']">PARTICIPATE/DONATE</a></div>
+            <div class="tickerItem"><a [routerLink]="['/']">ABOUT HAKKA.HOUSE INTL.</a></div>
+            <div class="tickerItem"><a [routerLink]="['/']">HAKKA.HOUSE BUSINESS PLAN</a></div>
+            <div class="tickerItem"><a [routerLink]="['/']">PUBLICATIONS</a></div>
+            <div class="tickerItem"><a [routerLink]="['/']">HAKKA.HOUSE HUI CROWD OFFERING</a></div>
+            <div class="tickerItem"><a [routerLink]="['/']">PARTICIPATE/DONATE</a></div>
           </div>
         </div>
-        <div class="arrowRight text-right">
-          <span id="aRight" class="fa fa-chevron-right">&gt;</span>
-        </div>
+        <div class="arrowRight text-right"><span id="aRight" class="fa fa-chevron-right">&gt;</span></div>
       </div>
     </div>
     <div class="topBanner">
-      <a [routerLink]="['/']"><img src="bannerTop.jpg" alt="" border="0" /></a>
+      <a [routerLink]="['/']"><img src="./images/bannerTop.png" alt="" border="0" /></a>
       <div class="background"></div>
       <span></span>
     </div>
@@ -30,7 +26,16 @@
     </div>
     <footer>
       <div class="containerContent">
-        <div class="copyright">© 2020 Arfler.com</div>
+        <div class="copyright">
+          <span>Copyright 2021 Arfler.com</span>
+          <a href="./Website_terms.pdf">Terms/Conditions</a>
+          <a href="./privacy_policy.pdf">Privacy Policy</a>
+          <a (click)="openContact()">Contact</a>
+        </div>
+        <div class="AuthorizeNetSeal">
+          <!-- BEGIN: TrustLock Badge --><a name="trustbadge" href="https://trustlock.co"><img name="trustseal" alt="Trust Badges" style="border: 0;" src="https://trustlock.co/wp-content/uploads/2019/01/ssl-secure-trust-badge-free.png" width="238" height="44"></a>
+          <!-- End: TrustLock Badge -->
+        </div>
       </div>
     </footer>
   </div>

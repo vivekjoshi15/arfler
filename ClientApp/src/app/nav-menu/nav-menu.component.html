@@ -1,9 +1,7 @@
   <div class="container">
     <div id="headerLeft">
       <div id="logoImg">
-        <a [routerLink]="['/login']"><img src="./logoIcon.png" alt="" border="0" /></a>
-        <!-- <br />
-  <a [routerLink]="['/login']">Login</a>-->
+        <a [routerLink]="['/login']"><img src="./logoIcon.png" alt="" border="0"></a>
       </div>
       <div id="logo">
         <a [routerLink]="['/']"><img src="./logo.png" alt="" border="0" /></a>
@@ -13,44 +11,40 @@
         </div>
       </div>
     </div>
-    <div id="headerCenter">
-      <div className="slide-container">
-      </div>
-    </div>
-    <div id="headerRight">
-      <nav class="navcl navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button"
-                    class="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target=".navbar-collapse"
-                    aria-label="Toggle navigation"
-                    [attr.aria-expanded]="isExpanded"
-                    (click)="toggle()">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" id="myNavbar" [ngClass]="{ show: isExpanded }">
-            <ul class="nav navbar-nav">
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/eat']">Eat/Entertain</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/shop']">Shop</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/places']">Places</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/connect']">Connect</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/learn']">Learn</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/spiritual']">Spiritual</a></li>
-              <li [routerLinkActive]="['link-active']"><a [routerLink]="['/share']">Share</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div id="searchBox">
-        <svg class="btnSearch" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-        </svg>
-        <input type="text" id="txtSearch" placeholder='search...' />
-      </div>
-      <div id="langBox">
-      </div>
+  <div id="headerCenter">
+    <div className="slide-container">
     </div>
   </div>
+  <div id="headerRight">
+    <nav class="navcl navbar navbar-inverse navbar-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse"
+                  aria-label="Toggle navigation"
+                  [attr.aria-expanded]="isExpanded"
+                  (click)="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" id="myNavbar" [ngClass]="{ show: isExpanded }">
+          <ul class="nav navbar-nav">
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/bookstore']">BookStore</a></li>
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/eat']">Eat/Entertain</a></li>
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/shop']">Shop</a></li>
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/places']">Places</a></li>
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/connect']">Connect</a></li>
+            <li [routerLinkActive]="['link-active']"><a [routerLink]="['/learn']">Learn</a></li>
+          </ul>
+        </div>
+        <div id="searchBox">
+          <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="btnSearch"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+          <input type="text" id="txtSearch" placeholder="search...">
+        </div>
+        <div id="langBox"></div>
+      </div>
+    </nav>
+  </div>
+</div>

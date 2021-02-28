@@ -1,0 +1,44 @@
+<div id="content" mat-dialog-content>
+  <div class="author">
+    <div id="pnlLeft">
+      <a (click)="openAboutMe()">
+        <img src="./images/harry.png" alt="" width="120" />
+      </a>
+      <a href="mailto:harry@arfler.com" class="lnk">Email Harry</a>
+      <a (click)="openAboutMe()" class="lnk">About Me</a>
+    </div>
+    <div class="text">
+      <h1>{{this.data.title}}</h1>
+      I am Harry Mokm. I live in Seattle, Washington, and grew up in Vietnam. As a child,
+      I witnessed the violence and destruction caused by war, which produced a strong desire
+      within me to help to achieve a better world. As a matter of fact, I have dreamt of doing
+      so since I first set foot on North American soil over four decades ago. A better world seems
+      far away to us today, but I believe we can get there if we understand the nature of our
+      problems and have a plan to solve them.<br /><br />
+      Today, I have reached the age of 70. Instead of retiring and withdrawing from the world,
+      I decided to create several new ventures to make my dream a reality. I started writing and
+      publishing books that I hope will help create positive change. At the same time, I am asking
+      readers like you to purchase my books to help accumulate the seed funding for my start-ups:
+      a healthy food service and a socially cooperative rewards network, each of which works in an
+      interlocking manner to inspire people toward a healthier and more productive life.<br /><br />
+      I hope you enjoy my books and purchase them for yourself, for family members, and for friends.
+      The proceeds from all of these books will go toward my projects to build a better tomorrow
+      for all of us.<br /><br />
+      After reading my book(s), if you like them, please share my website mokm.com with your friends,
+      relatives and colleagues so that more and more people will come to support these ideas.
+      We are building the power to make it happen, the “better world” we have all been dreaming of.
+      <br /><br />
+      If you would like to receive information and updates from me about these projects,
+      please sign up on MOKM.com and I will be happy to share with you about them. <br /><br />
+      I think you will enjoy my stories, and by purchasing them, you are making a contribution to
+      projects that will benefit the environment, our children, and society as a whole.<br /><br />
+      Harry Mokm<br />
+      Seattle, Washington<br />
+      December 2020
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>Close</button>
+</div>
+

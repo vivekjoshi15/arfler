@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Donate ${{this.data.price}}</h1>
+<div mat-dialog-content>
+  <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>CLOSE</button>
+</div>

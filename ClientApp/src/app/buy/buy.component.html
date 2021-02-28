@@ -1,0 +1,24 @@
+<div class="containerContent">
+  <div id="content">
+    <div class="books">
+      <div class="buy">
+        <img src="./images/book{{this.id}}.png" border="0" alt="Buy" />
+        <div class="info">
+          <h1>{{this.name}}</h1>
+          <p>Price: $25</p>
+          <p>Qty: <input type="number" value="1" [(ngModel)]="qty" (ngModelChange)="changeQty()" /></p>
+          <p>Total Amount: ${{price}}</p>
+          <p>
+            Payment Method:
+            <!--<input type="radio" name="method" value="paypal" (click)="selectMethod('paypal');" /> Paypal
+    <input type="radio" name="method" value="Credit Card" (click)="selectMethod('creditcard');" /> Credit Card-->
+          </p>
+          <div class="buy" *ngIf="this.type=='paypal'">
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+            <!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFPSBVCQB68C8" target="_blank" rel="noopener noreferrer">Pay Now</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
