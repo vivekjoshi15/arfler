@@ -1,0 +1,33 @@
+
+.mat-dialog-content {
+  display: flex;
+  margin: 0 -5px;
+  padding: 0 5px;
+}
+
+img {
+  max-width: 110px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  float: left;
+}
+
+.row-top {
+  display: block;
+}
+
+.mat-dialog-title {
+  text-align: center;
+  color: #b91b0e;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.mat-button {
+  background: #b91b0e;
+  color: #fff;
+}

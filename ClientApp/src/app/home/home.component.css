@@ -12,14 +12,27 @@
   flex-direction: column;
 }
 
-.author {
+#topRow {
   display: flex;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 60px;
-  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 35px;
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+.author {
+  display: flex;
+  width: 62%;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: flex-start;
+  border: solid 2px #b91b0e;
+  border-radius: 8px;
+  padding: 6px;
+  padding-right: 15px;
+  margin-right: 35px;
 }
 
 .books {
@@ -27,20 +40,146 @@
   width: 100%;
 }
 
-.author .text{
-    color: #000;
+.author img {
+  width: 120px;
+  border-radius: 8px;
 }
 
-#buy {
+.author .text {
+  color: #000;
+  margin-left: 15px;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+  .author .text a {
+    float: right;
+  }
+
+#pnlLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+  #pnlLeft a {
+    cursor: pointer;
+  }
+
+    #pnlLeft a.lnk {
+      color: #b90900;
+      text-align: center;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+.websites {
+  display: flex;
+  width: 38%;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+  .websites .row1, .websites .row2 {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .websites .row2 {
+    border: 2px solid #248f0d;
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 15px;
+  }
+
+    .websites .row2 span {
+      margin-left: 10px;
+      cursor: pointer;
+      padding: 2px 4px;
+      border-radius: 5px;
+      line-height: 20px;
+      font-size: 15px;
+    }
+
+      .websites .row2 span:hover {
+        background-color: #b91b0e;
+        color: #fff;
+      }
+
+      .websites .row2 span.sel {
+        background-color: #b91b0e;
+        color: #fff;
+      }
+
+  .websites .row1 .website {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+    .websites .row1 .website img {
+      width: 55px;
+    }
+
+    .websites .row1 .website .text {
+      color: #000;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+  .websites .row2 a.btnDonate {
+    display: inline-flex;
+    text-align: center;
+    width: 26%;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b90900;
+    font-size: 25px;
+    justify-content: center;
+    padding: 0px 0px;
+    cursor: pointer;
+  }
+
+a {
+  text-decoration: none;
+  color: #b90900;
+}
+
+.websites .row2 a.btnDonate:hover {
+  text-decoration: none;
+}
+
+.buy {
   -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1; /* Firefox 19- */
   -ms-flex: 1; /* TWEENER - IE 10 */
   -webkit-flex: 1; /* NEW - Chrome */
   flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-items: flex-start;
+  margin-right: 3.67%;
+  width: 13%;
 }
 
-  #buy img {
-    max-height: 360px;
+  .buy img {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .buy:last-child {
+    margin-right: 0;
   }
 
 .buylink {
@@ -51,3 +190,90 @@
   .buylink:hover {
     text-decoration: underline;
   }
+
+.info {
+  font-size: 14px;
+  margin-top: 5px;
+  align-items: stretch;
+  align-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+  .info .preview {
+    width: 33%;
+    color: #666;
+    justify-content: flex-start;
+    display: inline-flex;
+    cursor: pointer;
+  }
+
+  .info .buy {
+    display: inline-flex;
+    width: 33%;
+    justify-content: center;
+  }
+
+  .info span {
+    display: inline-flex;
+    width: 33%;
+    justify-content: flex-end;
+  }
+
+@media (max-width: 668px) {
+  #topRow {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .websites {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .books {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy {
+    margin-right: 0%;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #topRow {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .websites {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .books {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy {
+    margin-right: 0%;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,9 @@
+﻿@*@{
+    Layout = "_Layout";
+}*@
+@{
+    if (!(ViewContext.ViewBag.Title == "Quick Register"))
+    {
+        Layout = "_Layout";// Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}

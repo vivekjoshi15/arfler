@@ -1,0 +1,166 @@
+
+#panelContent {
+  display: flex;
+  padding: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.books {
+  display: flex;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.buy {
+  -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1; /* Firefox 19- */
+  -ms-flex: 1; /* TWEENER - IE 10 */
+  -webkit-flex: 1; /* NEW - Chrome */
+  flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+  .buy img {
+    width: 100%;
+    cursor: pointer;
+    max-width: 240px;
+  }
+
+  .buy:last-child {
+    margin-right: 0;
+  }
+
+.buylink {
+  color: #666;
+  text-decoration: none;
+}
+
+  .buylink:hover {
+    text-decoration: underline;
+  }
+
+.info {
+  font-size: 14px;
+  margin-top: 5px;
+  align-items: stretch;
+  align-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-left: 20px;
+  width: 400px;
+}
+
+  .info h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .info p {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+
+  .info .buy {
+    display: inline-flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+    width: 400px;
+  }
+
+  .info span {
+    display: inline-flex;
+    width: 33%;
+    justify-content: flex-end;
+  }
+
+ngx-paypal {
+  width: 400px;
+}
+
+input[type=number]{
+    width:50px;
+}
+
+@media screen and (max-width: 575px) {
+  .books {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy {
+    margin-right: 0%;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+    .buy img {
+      margin: 0px auto;
+    }
+
+  .info {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+    .info .buy {
+      margin-left: 0px;
+      width: 100%;
+    }
+
+  ngx-paypal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .books {
+    flex-direction: column;
+    align-items: center;
+  }
+
+    .buy {
+      margin-right: 0%;
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 10px;
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+    }
+
+      .buy img {
+        margin: 0px auto;
+      }
+
+  .info {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+    .info .buy {
+      margin-left: 0px;
+      width: 100%;
+    }
+
+  ngx-paypal {
+    width: 100%;
+  }
+}

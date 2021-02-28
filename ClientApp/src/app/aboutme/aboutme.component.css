@@ -1,0 +1,49 @@
+#content {
+  display: flex;
+  margin: 0 -5px;
+  padding: 0 5px;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+  .author img {
+    text-align: right;
+    float: right;
+    margin-left: 10px;
+    border-radius: 8px;
+  }
+
+  .author .text {
+    color: #000;
+    margin-left: 15px;
+    line-height: 19px;
+    font-size: 15px;
+  }
+
+    .author .text a {
+      float: right;
+    }
+
+h1 {
+  text-align: left;
+  color: #b91b0e;
+  font-size: 20px;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+  margin-bottom: -5px;
+}
+
+.mat-button {
+  background: #b91b0e;
+  color: #fff;
+}
